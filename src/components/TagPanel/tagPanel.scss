@@ -1,0 +1,63 @@
+.archives-container {
+  margin: 30px 30px 0;
+  padding-right: 60px;
+  display: flex;
+  align-items: flex-start;
+  border-bottom: 1px solid #2f2f2f;
+
+  a {
+    text-decoration: none;
+  }
+
+  .archive-year {
+    font-size: 28px;
+    line-height: 34px;
+    flex-shrink: 0;
+    width: 150px;
+    margin-top: 20px;
+  }
+
+  .archive {
+    flex: 1;
+
+    .archive-article {
+      padding: 20px 0;
+      font-size: 16px;
+      border-bottom: 1px solid #2f2f2f;
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+
+    .archive-title-container {
+      display: flex;
+      align-items: center;
+
+      .archive-title {
+        flex: 1;
+
+        a {
+          color: #999;
+
+          &:hover {
+            color: #fff;
+          }
+        }
+      }
+
+      time {
+        font-size: 12px;
+        color: #aaa;
+        cursor: default;
+        &:before{
+          content: "\f073";
+          color: #999;
+          position: relative;
+          margin-right: 10px;
+          font: 14px FontAwesome;
+        }
+      }
+    }
+  }
+}
