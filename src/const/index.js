@@ -1,0 +1,1 @@
+export const PAGE_LIST_COUNT = 10

@@ -3,8 +3,7 @@ title: "从零搭建一个react-hooks项目（五）"
 date: "2020-09-18"
 name: 'francis'
 age: '25'
-create_page_tags: 'redux'
-tags: [react, react hooks, redux, webpack,算法, JavaScript回顾]
+tags: [react, react hooks, redux, webpack]
 categories: Webpack
 ---
 

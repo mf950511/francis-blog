@@ -1,0 +1,45 @@
+.pagination {
+  text-align: center;
+  padding: 30px 0;
+
+  .show {
+    color: #999;
+    margin: 0 1.6875rem;
+    opacity: 0;
+  }
+
+  &:hover {
+    .show {
+      opacity: 1;
+    }
+  }
+
+  .hide {
+    opacity: 0;
+  }
+
+  .pagination-item {
+    width: 20px;
+    height: 20px;
+    background: #4d4d4d;
+    border-radius: 50%;
+    display: inline-block;
+    color: #fff;
+    line-height: 20px;
+    font-size: 12px;
+    margin: 0 3px 30px;
+
+    &:hover {
+      background: #5e5e5e;
+    }
+
+    &.current {
+      background: #4094c7;
+      cursor: default;
+
+      &:hover {
+        background: #4094c7;
+      }
+    }
+  }
+}

@@ -5,7 +5,7 @@ import TagPanel from '../components/TagPanel'
 import { sortDataByDate } from '../utils/index.js'
 
 const BlogPanel = ({data}) => {
-  const sortedData = sortDataByDate(data.allMdx.nodes)
+  const sortedData = sortDataByDate(data.allMarkdownRemark.edges)
   return (
     <Layout>
       {
@@ -24,15 +24,19 @@ export default BlogPanel
 
 export const query = graphql`
   query($category: String) {
-    allMdx(filter: {frontmatter: {categories: {in: [$category] }}}) {
-      nodes {
-        frontmatter {
-          date(formatString: "YYYY:MM-DD")
-          title
-          categories
-          tags
+    allMarkdownRemark(filter: {frontmatter: {categories: {in: [$category] }}}) {
+      edges {
+        node {
+          fields{
+            slug
+          }
+          frontmatter {
+            date(formatString: "YYYY:MM-DD")
+            title
+            categories
+            tags
+          }
         }
-        slug
       }
     }
   }

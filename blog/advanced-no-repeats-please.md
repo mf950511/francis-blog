@@ -1,9 +1,8 @@
 ---
 title: FreeCodeCamp 高级算法题 - 字符串排列
-date: "2019-09-06"
+date: "2017-09-06 22:32:17"
 tags: [FreeCodeCamp,高级,算法]
-create_page_tags: '高级'
-categories: JavaScript
+categories: FCC
 ---
 
 # 字符串排列 (No repeats please)

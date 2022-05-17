@@ -1,8 +1,10 @@
 import * as React from 'react'
 import { useStaticQuery,graphql } from "gatsby"
+import NavHeader from '../NavHeader'
+import 'prismjs/themes/prism-okaidia.css'
 import './layout.scss'
 
-const Layout = ({children}) => {
+const Layout = ({children, className}) => {
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -13,10 +15,14 @@ const Layout = ({children}) => {
     }
   `)
   return (
-    <div className="container">
-      <header className="header-left"></header>
+    <div className={`container ${className}`}>
+      <header className="header-left">
+        <NavHeader />
+      </header>
       <div className="content">
-        <header className="header-top"></header>
+        <header className="header-top">
+          <NavHeader />
+        </header>
         <main className="main">
           {children}
         </main>
@@ -24,5 +30,7 @@ const Layout = ({children}) => {
     </div>
   )
 }
+
+
 
 export default Layout

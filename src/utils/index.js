@@ -1,6 +1,6 @@
 export const sortDataByDate = (blogList) => {
   return blogList.reduce((target, blogItem) => {
-    const { frontmatter: { date: yearAndDate, ...blogOtherInfo }, slug } = blogItem
+    const { frontmatter: { date: yearAndDate, ...blogOtherInfo }, fields: { slug } } = blogItem.node
     const [year, date] = yearAndDate.split(':')
     const tagBlogInfo = {
       ...blogOtherInfo,
