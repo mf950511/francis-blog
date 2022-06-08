@@ -19,6 +19,7 @@ categories: JavaScript
   - 合成事件（CompositionEvent）: 在使用某种IME（Input Method Editor,输入法编辑器）输入字符时触发
 - 所有主流浏览器都支持DOM2 Events 跟DOM3 Events
 - 用户界面事件或UI事件，主要有以下几种
+<!--more-->
   - DOMActivate: 元素被用户通过鼠标或键盘操作激活时触发(比click或keydown)更常用，在DOM3 Events飞起，因为浏览器实现有差异
   - load: 在window上页面加载完成后触发，在窗套（<frameset>）上所有窗格(frame)加载完成后触发，img元素上当图片加载完成后触发，在<object>上对应对象加载完成后触发
   - unload: window上页面完全卸载后触发，窗套上所有窗格卸载后触发，object上的对应对象卸载后触发
@@ -42,7 +43,6 @@ window.addEventListener('load', () => {
   image.src = 'smile.jpg'
 })
 ```
-<!--more-->
 - 这里注意，图片的下载不一定要把元素添加到页面，只要给他设置了src属性就开始下载
 - 可以使用这种形式来进行图片的预加载
 
