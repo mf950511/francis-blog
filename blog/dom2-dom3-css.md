@@ -82,7 +82,7 @@ for(let i = 0; i < myDiv.style.length; ++i){
 ```
 
 - 所有浏览器中，计算样式都是只读的，不可修改，计算样式还会包含默认值
-- CSSStyleSheet类型表示CSS样式表，包括使用<link>元素和通过<style>元素定义的样式。这两个元素本身是HTMLLinkElement和HTMLStyleElement。CSSStyleSheet类型是通用样式表类型。CSSStyleSheet类型的实例是一个只读对象
+- CSSStyleSheet类型表示CSS样式表，包括使用\<link>元素和通过\<style>元素定义的样式。这两个元素本身是HTMLLinkElement和HTMLStyleElement。CSSStyleSheet类型是通用样式表类型。CSSStyleSheet类型的实例是一个只读对象
 - CSSStyle继承StyleSheet，以下为继承的属性
   - disabled:布尔值，样式表是否被禁用，设置为true会禁用样式表
   - href:如果是link包含的样式表，返回样式表的URL，否则返回null
@@ -123,7 +123,7 @@ sheet.insertRule("body{ background-color: silver }", 0)
   - offsetLeft: 元素左边框外侧距离包含元素左边框内侧的像素数
   - offsetTop:元素上边框外侧距离包含元素上边框内侧的像素数
   - offsetWidth:元素在水平方向上占用的像素尺寸，包含它的宽度、垂直滚动条宽度和左右边框宽度
-- offsetLeft和offsetTop是相对于包含元素的，包含元素保存在offsetParent属性中。offsetParent不一定是parentNode。比如<td>元素的offsetParent是table元素，因为table是节点中第一个提供尺寸的元素
+- offsetLeft和offsetTop是相对于包含元素的，包含元素保存在offsetParent属性中。offsetParent不一定是parentNode。比如\<td>元素的offsetParent是table元素，因为table是节点中第一个提供尺寸的元素
 - 要确定一个元素在页面中的偏移量，可以将它的offsetLeft和offsetTop分别于offsetParent的相同属性相加，一直到更元素
 
 ```js

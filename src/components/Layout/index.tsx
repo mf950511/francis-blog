@@ -4,7 +4,7 @@ import NavHeader from '../NavHeader'
 import 'prismjs/themes/prism-okaidia.css'
 import './layout.scss'
 
-const Layout = ({children, className}) => {
+const Layout = ({children, className, scrollRestoration}) => {
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -19,7 +19,7 @@ const Layout = ({children, className}) => {
       <header className="header-left">
         <NavHeader />
       </header>
-      <div className="content">
+      <div className="content" {...scrollRestoration}>
         <header className="header-top">
           <NavHeader />
         </header>

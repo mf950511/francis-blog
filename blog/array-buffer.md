@@ -172,7 +172,7 @@ console.log(view4.getInt8(0)) // VM4674:13 Uncaught TypeError: Cannot convert a 
 
 - 定型数组是另一种形式的ArrayBuffer，特定于一种ElementType并遵循原生的字节序，因此，它提供了适用面更广的Api和更好的性能
 - 创建定型数组的方式有：读取已有缓冲、使用自有缓冲、填充可迭代结构，以及填充基于任意类型的定型数组
-- 通过<ElementType>.from()和<ElementType>.of()也可以创建定型数组
+- 通过\<ElementType>.from()和\<ElementType>.of()也可以创建定型数组
 
 ```js
 // 通过缓冲区创建

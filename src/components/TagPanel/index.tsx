@@ -16,7 +16,7 @@ const TagPanel = ({year, tagBlogNode}) => {
               <header className="archive-article-header">
                 <div className="archive-title-container">
                   <div className="archive-title">
-                    <Link to={`/blog/${blog.slug}`}>{blog.title}</Link>
+                    <Link to={`/blog${blog.slug}`}>{blog.title}</Link>
                   </div>
                   <time>{blog.date}</time>
                 </div>

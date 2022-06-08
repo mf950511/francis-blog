@@ -83,9 +83,9 @@ range.setEnd(worldNode, 3)
 ```
 
 - 因为起点在"Hello"中的字母"e"之后，所以给setStart传入helloNode跟偏移量2。设置选区终点，给setEnd传入worldNode和偏移量3
-- 因为helloNode与worldNode都是文本节点，所以会成为范围的startContainer与endContainer，这样startOffset与endOffset实际上表示每个节点中文本字符的位置，而不是子节点的位置（传入元素节点时的情形）。而commonAncestorContainer是<p>元素，包含这两个节点的第一个祖先节点
+- 因为helloNode与worldNode都是文本节点，所以会成为范围的startContainer与endContainer，这样startOffset与endOffset实际上表示每个节点中文本字符的位置，而不是子节点的位置（传入元素节点时的情形）。而commonAncestorContainer是\<p>元素，包含这两个节点的第一个祖先节点
 - 创建范围后，浏览器在内部会创建一个文档片段节点，用于包含选区中的节点。为操作的内容，选区中的内容必须格式完好，前面的例子中，并不是完好的DOM结构，所以无法在DOM中表示。范围能够确认缺失的开始与结束标签，从而重构出有效的DOM结构
-- 上面的例子中，范围发现缺少开始<b>与结束<b>，就会自动补齐，就成了
+- 上面的例子中，范围发现缺少开始\<b>与结束\<b>，就会自动补齐，就成了
 
 ```js
 <p><b>He</b><b>llo</b> world</p>
@@ -161,7 +161,7 @@ range.insertNode(span)
 <p><b>He<span style="color: red">Inserted text</span>llo</b> world</p>
 ```
 
-- 原始的HTML并没有添加或删除<b>元素，并没有使用之前提到的管理方法。利用这个方法可以插入有用的信息，比如在外链插入一个小图标
+- 原始的HTML并没有添加或删除\<b>元素，并没有使用之前提到的管理方法。利用这个方法可以插入有用的信息，比如在外链插入一个小图标
 - surroundContents()插入包含范围的内容，接受一个参数，既包含范围的节点，调用方法后，后台执行操作
   - 提取范围内容
   - 在原始文档中范围之前所在位置插入给定的节点
@@ -182,7 +182,7 @@ range.surroundContents(span)
 <p><b><span style="background-color: yellow">Hello</span></b> world</p>
 ```
 
-- 为了插入<span>元素，范围中必须包含完整DOM结构。如果范围中包含部分选择的非文节点，操作会失败并报错。如果给定的节点是Document、DocumentType或DocumentFragment类型，也会报错
+- 为了插入\<span>元素，范围中必须包含完整DOM结构。如果范围中包含部分选择的非文节点，操作会失败并报错。如果给定的节点是Document、DocumentType或DocumentFragment类型，也会报错
 - 如果范围并没有选择文档的任何部分，则称为折叠。折叠范围类似于文本框：如果文本框有文本，那可以用鼠标选中以亮度显示全部文本。这时候再点击鼠标，选区会移除，光标落在两个字符中间。折叠范围时，位置会设置为范围与文档交界的地方，可能是范围选区的开始，也可能是结尾
 - 折叠范围可以用collapse()方法，接受一个参数：布尔值，表示折叠到哪一端。true表示折叠到起点，false表示折叠到终点。要确定是否被折叠，检测collapsed属性
 

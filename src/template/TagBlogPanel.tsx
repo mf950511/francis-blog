@@ -1,13 +1,15 @@
 import * as React from 'react'
-import { graphql } from 'gatsby'
+import { graphql, useScrollRestoration } from 'gatsby'
 import Layout from '../components/Layout'
 import TagPanel from '../components/TagPanel'
 import { sortDataByDate } from '../utils/index.js'
 
-const BlogPanel = ({data}) => {
+const BlogPanel = ({data, pageContext}) => {
   const sortedData = sortDataByDate(data.allMarkdownRemark.edges)
+  const currentScrollRestoration = useScrollRestoration(`blog-category-${pageContext.category}`)
+
   return (
-    <Layout>
+    <Layout scrollRestoration={currentScrollRestoration}>
       {
         Object.keys(sortedData).map(key => {
           let tagBlogNode = sortedData[key]

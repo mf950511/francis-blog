@@ -88,25 +88,25 @@ document.body.appendChild(table)
 
 - 上面创建的形式太过繁琐，所以新增了以下属性
 - table新增的属性
-  - caption，指向<caption>元素的指针
-  - tBodies，包含<tbody>的HTMLCollection
-  - tFoot，指向<tfoot>元素
-  - tHead，指向<thead>元素
+  - caption，指向\<caption>元素的指针
+  - tBodies，包含\<tbody>的HTMLCollection
+  - tFoot，指向\<tfoot>元素
+  - tHead，指向\<thead>元素
   - rows：包含所有行的HTMLCollection
-  - createTHead()：创建<thead>标签，插入表格，返回引用
-  - createTFoot()：创建<tfoot>元素，插入表格，返回引用
-  - createCaption()：创建<caption>元素，插入表格，返回引用
-  - deleteTHead()：删除<thead>元素
-  - deleteTFoot()：删除<tfoot>元素
-  - deleteCaption()：删除<caption>元素
+  - createTHead()：创建\<thead>标签，插入表格，返回引用
+  - createTFoot()：创建\<tfoot>元素，插入表格，返回引用
+  - createCaption()：创建\<caption>元素，插入表格，返回引用
+  - deleteTHead()：删除\<thead>元素
+  - deleteTFoot()：删除\<tfoot>元素
+  - deleteCaption()：删除\<caption>元素
   - deleteRow(pos): 删除给定的行
   - insertRow(pos)，在给定位置插入一行
 - tbody元素添加以下方法
-  - rows，包含<tbody>中所有行的HTMLCollection
+  - rows，包含\<tbody>中所有行的HTMLCollection
   - deleteRow(pos)，删除指定位置行
   - insertRow(pos)，指定位置插入一行，返回改行的引用
 - tr元素新增以下属性和方法
-  - cells，包含<tr>元素所有表元的HTMLCollection
+  - cells，包含\<tr>元素所有表元的HTMLCollection
   - deleteCell(pos)，删除指定位置表元
   - insertCell(pos)，指定位置插入表元返回引用
 - 重写上面代码

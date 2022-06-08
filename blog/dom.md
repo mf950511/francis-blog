@@ -11,7 +11,7 @@ categories: JavaScript
 
 - 文档对象类型（DOM,Document Object Model）是HTML和XML文档的编程接口。DOM表示由多层节点构成的文档，通过它开发者可以添加、删除、修改页面部分。DOM现在是真正跨平台、语言无关的表示和操作王爷的方式。
 - IE8及以下的DOM都是通过COM对象实现的，也就是这些版本中的DOM对象与原生JavaScript具有不同的行为和功能。
-- document为每个文档的根节点。根节点的唯一子节点是html，我们成为文档元素(documentElement)，每个文档只能有一个文档元素。HTML页面中，文档元素始终是<html>元素，XML文档中就没有这个限制。
+- document为每个文档的根节点。根节点的唯一子节点是html，我们成为文档元素(documentElement)，每个文档只能有一个文档元素。HTML页面中，文档元素始终是\<html>元素，XML文档中就没有这个限制。
 - DOM中有12中节点类型，这些类型都继承一种基本类型。
 
 ## Node类型
@@ -111,7 +111,7 @@ console.log(deepList.childNodes.length) // 0
 - document.domain获取当前页面的域名
 - document.referrer包含链接到当前页面的那个页面的URL，如果当前页面没有来源，那document.referrer包含空字符串。所有这些信息都可以在HTTP头部信息获取。
 - 这些属性中只有域名是可设置的，出于安全考虑，给domain设置的值有限制，如果URL包含子域名如p2p.wrox.com，则可以设置为"wrop.com"，不能设置URL中不包含的值。
-- 当页面中包含来自不同子域的窗格（<frame>）或内嵌窗格(<iframe>)时，可以设置document.domain来绕过浏览器跨域通信的限制，实现JavaScript通信。在每个页面上把document.domain设置为相同的值，那就可以互相访问对方的JavaScript对象了。比如，一个加载自www.wrox.com的页面包含内嵌窗格，其中页面加载自p2p.wrox.com。两个页面的document.domain包含不同的字符串，内部与外部不能相互访问。要是把document.domain都设为wrox.com后就可以通信了
+- 当页面中包含来自不同子域的窗格（\<frame>）或内嵌窗格(\<iframe>)时，可以设置document.domain来绕过浏览器跨域通信的限制，实现JavaScript通信。在每个页面上把document.domain设置为相同的值，那就可以互相访问对方的JavaScript对象了。比如，一个加载自www.wrox.com的页面包含内嵌窗格，其中页面加载自p2p.wrox.com。两个页面的document.domain包含不同的字符串，内部与外部不能相互访问。要是把document.domain都设为wrox.com后就可以通信了
 - 浏览器对domain还有一个限制，将document.domain设置为"wrox.com"后就不能设置回"p2p.wrox.com"
 
 ## 定位元素
@@ -133,11 +133,11 @@ let myImage = images['myImage']
 - 匹配所有元素可以传入*
 - document.getElementsByName()接收一个字符串，返回具有给定name属性的元素
 - document对象还暴露了几个特殊集合，这些集合也都是HTMLCollection的实例，如下
-  - document.authors包含文档中所有带name属性的<a>元素
-  - document.applets包含文档中的所有<applet>元素（applet元素不推荐使用，所以集合已经废弃）
-  - document.forms包含文档中的所有<form>元素
-  - document.images包含文档中的所有<img>元素
-  - document.links包含文档中的所有带href属性的<a>元素
+  - document.authors包含文档中所有带name属性的\<a>元素
+  - document.applets包含文档中的所有\<applet>元素（applet元素不推荐使用，所以集合已经废弃）
+  - document.forms包含文档中的所有\<form>元素
+  - document.images包含文档中的所有\<img>元素
+  - document.links包含文档中的所有带href属性的\<a>元素
 - 这些特殊集合都存在与HTMLDocument对象上，内容也都是实时更新的
 
 ## DOM兼容性测试

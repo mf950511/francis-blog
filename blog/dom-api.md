@@ -194,7 +194,7 @@ if(document.competMode === 'CSS1Compat') {
 ```
 
 - 新增了document.head属性指向文档的head元素
-- HTML5新增了characterSet属性来表示文档实际使用的字符集，也可以用来指定新的字符集。默认值是"UTF-16"，可以通过<meta>元素或响应头，以及新增的characterSet属性来修改
+- HTML5新增了characterSet属性来表示文档实际使用的字符集，也可以用来指定新的字符集。默认值是"UTF-16"，可以通过\<meta>元素或响应头，以及新增的characterSet属性来修改
 
 ```js
 let head = document.head

@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { graphql, Link } from 'gatsby'
+import { graphql, Link, useScrollRestoration } from 'gatsby'
 import Layout from '../components/Layout'
 import CategoryAndTagInfo from '../components/CategoryAndTagInfo'
 import Pagination from '../components/Pagination'
@@ -7,8 +7,10 @@ import '../common/css/blog.scss'
 
 const BlogList = ({data, pageContext}) => {
   const allBlogNodes = data.allMarkdownRemark.edges
+  const currentScrollRestoration = useScrollRestoration(`blog-list-${pageContext.currentPage}`)
+  
   return (
-    <Layout>
+    <Layout scrollRestoration={currentScrollRestoration}>
       {
         allBlogNodes.map((edge) => {
           return (

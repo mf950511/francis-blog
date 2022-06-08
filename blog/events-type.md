@@ -21,7 +21,7 @@ categories: JavaScript
 - 用户界面事件或UI事件，主要有以下几种
 <!--more-->
   - DOMActivate: 元素被用户通过鼠标或键盘操作激活时触发(比click或keydown)更常用，在DOM3 Events飞起，因为浏览器实现有差异
-  - load: 在window上页面加载完成后触发，在窗套（<frameset>）上所有窗格(frame)加载完成后触发，img元素上当图片加载完成后触发，在<object>上对应对象加载完成后触发
+  - load: 在window上页面加载完成后触发，在窗套（\<frameset>）上所有窗格(frame)加载完成后触发，img元素上当图片加载完成后触发，在\<object>上对应对象加载完成后触发
   - unload: window上页面完全卸载后触发，窗套上所有窗格卸载后触发，object上的对应对象卸载后触发
   - abort: 在object元素上对应的对象加载完成前被用户提前终止时触发
   - error: window上当JavaScript报错时触发，img元素当图片无法加载时触发，object元素无法加载相应对象时触发，窗套上当一个或多个窗格无法完成加载时触发

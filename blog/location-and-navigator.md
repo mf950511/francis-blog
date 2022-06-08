@@ -132,7 +132,7 @@ location.port = 8080
   - oscpu: 返回浏览器运行设备的操作系统和CPU
   - permissions: 返回暴露Permissions API的Permissions对象
   - platform: 返回浏览器运行的系统平台
-  - plugins: 返回浏览器中安装的插件数组，IE中包含页面中的所有<embed>元素
+  - plugins: 返回浏览器中安装的插件数组，IE中包含页面中的所有\<embed>元素
   - product: 返回产品名称（一般是"Gecko"）
   - productSub: 返回产品的额外信息（一般是Gecko的版本）
   - registerProtocolHandler(): 讲一个网站注册为特定协议的处理程序

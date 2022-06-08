@@ -22,7 +22,7 @@ categories: JavaScript
 ## XML命名空间
 
 - XML空间文档可以实现在一个格式规范的文档中混用不同的XML语言，而不必担心元素命名冲突。严格说XML命名空间在XHTML中才支持，HTML不支持，所以需要使用XHTML做势力
-- 命名空间是使用xmlns指定的。XHTML的命名空间是"http://www.w3.org/1999/xhtml"，应该包含在任何格式规范的XHTML页面的<html>元素中
+- 命名空间是使用xmlns指定的。XHTML的命名空间是"http://www.w3.org/1999/xhtml"，应该包含在任何格式规范的XHTML页面的\<html>元素中
 <!--more-->
 ```js
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -144,7 +144,7 @@ let newNode = document.importNode(oldNode, true)
 document.body.appendChild(newNode)
 ```
 
-- DOM2 View给Document类型增加了新属性defaultView，是一个指向拥有当前文档的窗口（或窗格<frame>）的指针。这个规范中没有明确视图何时可用，因此这是添加的唯一一个属性。defaultView属性得到了除IE8及更早之前版本所有浏览器的支持。IE8及更早版本支持等价的parentWindow属性，Opera也支持这个属性
+- DOM2 View给Document类型增加了新属性defaultView，是一个指向拥有当前文档的窗口（或窗格\<frame>）的指针。这个规范中没有明确视图何时可用，因此这是添加的唯一一个属性。defaultView属性得到了除IE8及更早之前版本所有浏览器的支持。IE8及更早版本支持等价的parentWindow属性，Opera也支持这个属性
 - DOM2 Core还针对document.implementation对象新增了两个新方法：createDOcumentType()和createDocument()，前者用于创建DocumentType类型的新节点，接受3个参数：文档类型名称、publicId、systemId
 
 ```js
@@ -183,7 +183,7 @@ console.log(newDiv.getUserData('name')) // Nicholas
 ```
 
 - 这样，在第一个div被复制时，就会调用处理函数，然后把对应的数据附加到目标节点。
-- DOM2 HTML给HTMLIFrameElement(即<iframe>，内嵌表格)类型新增了一个属性，叫contentDocument。这个属性包含代表子内嵌窗格中内容的document对象的指针
+- DOM2 HTML给HTMLIFrameElement(即\<iframe>，内嵌表格)类型新增了一个属性，叫contentDocument。这个属性包含代表子内嵌窗格中内容的document对象的指针
 
 ```js
 let iframe = document.getElementById('myIframe')
