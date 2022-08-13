@@ -1,10 +1,20 @@
 import * as React from 'react'
-import { graphql, Link } from 'gatsby'
+import { graphql } from 'gatsby'
 import Layout from '../../components/Layout'
 import CategoryAndTagInfo from '../../components/CategoryAndTagInfo'
+import { FrontMatter } from '../../utils/index'
 import '../../common/css/blog.scss'
 
-const BlogPost = ({data}) => {
+type PropsType = {
+  data: {
+    markdownRemark: {
+      frontmatter: FrontMatter;
+      html: string;
+    }
+  }
+}
+
+const BlogPost = ({data}: PropsType) => {
   return (
     <Layout>
       <div className="blog-detail-container">

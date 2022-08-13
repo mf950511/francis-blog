@@ -1,19 +1,16 @@
 import * as React from 'react'
-import { useStaticQuery,graphql } from "gatsby"
 import NavHeader from '../NavHeader'
 import 'prismjs/themes/prism-okaidia.css'
 import './layout.scss'
 
-const Layout = ({children, className, scrollRestoration}) => {
-  const data = useStaticQuery(graphql`
-    query {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
+type PropType = {
+  children: React.ReactElement;
+  className?: string;
+  scrollRestoration?: any
+}
+
+const Layout = ({children, className, scrollRestoration}: PropType) => {
+
   return (
     <div className={`container ${className}`}>
       <header className="header-left">

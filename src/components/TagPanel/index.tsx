@@ -1,9 +1,15 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import CategoryAndTagInfo from '../CategoryAndTagInfo'
+import {FrontMatter} from '../../utils/index'
 import './tagPanel.scss'
 
-const TagPanel = ({year, tagBlogNode}) => {
+type PropsType = {
+  year: string;
+  tagBlogNode: FrontMatter[]
+}
+
+const TagPanel = ({year, tagBlogNode}: PropsType) => {
   return (
     <section className="archives-container">
       <div className="archive-year">

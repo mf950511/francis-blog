@@ -1,7 +1,13 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import './index.scss'
-const CategoryAndTagInfo = ({category, tags}) => {
+
+type PropsType = {
+  category: string;
+  tags: string[]
+}
+
+const CategoryAndTagInfo = ({category, tags}: PropsType) => {
   return (
     <div className="tag-info-container">
       <div className="tag-info__category">

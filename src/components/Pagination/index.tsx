@@ -2,7 +2,13 @@ import * as React from 'react'
 import { Link } from 'gatsby'
 import './index.scss'
 
-const Pagination = ({pageCount, currentIndex, baseUrl}) => {
+type PropsType = {
+  pageCount: number;
+  currentIndex: number;
+  baseUrl: string;
+}
+
+const Pagination = ({pageCount, currentIndex, baseUrl}: PropsType) => {
   if(pageCount === 1) {
     return null
   }

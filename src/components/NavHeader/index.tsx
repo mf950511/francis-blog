@@ -1,9 +1,9 @@
 import React from 'react'
-import { Link, useStaticQuery, graphql } from 'gatsby'
+import { useStaticQuery, graphql, Link } from 'gatsby'
 import cat from '../../common/images/cat.jpg'
 import './index.scss'
 
-const NavHeader = ({className}) => {
+const NavHeader = ({className}: {className?: string}) => {
   const data = useStaticQuery(
   graphql`
     query{
