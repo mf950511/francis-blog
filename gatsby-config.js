@@ -1,4 +1,4 @@
-const config = {
+module.exports = {
   siteMetadata: {
     title: `Francis Blog`,
     author: 'Francis',
